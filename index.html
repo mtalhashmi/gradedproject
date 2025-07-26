@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Albert Einstein</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <h1>Albert Einstein</h1>
+    <p>German-born theoretical physicist who developed the theory of relativity</p>
+    <button onclick="location.href='full-article.html'">Read full article</button>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a class="tab-link active" data-tab="summary">Summary</a>
+    <a class="tab-link" data-tab="life">Life</a>
+    <a class="tab-link" data-tab="contributions">Contributions</a>
+    <a class="tab-link" data-tab="legacy">Legacy</a>
+    <a class="tab-link" data-tab="media">Media</a>
+  </nav>
+
+  <!-- MAIN SECTION -->
+  <div class="container">
+    <div class="main-content">
+      <div id="summary" class="tab-section active card">
+        <h2>Summary</h2>
+        <p>Einstein’s achievements... [text goes here]</p>
+      </div>
+      <div id="life" class="tab-section card">
+        <h2>Life</h2>
+        <p>Early life and education... [text goes here]</p>
+      </div>
+      <div id="contributions" class="tab-section card">
+        <h2>Contributions</h2>
+        <p>Mass-energy equivalence, relativity... [text goes here]</p>
+      </div>
+      <div id="legacy" class="tab-section card">
+        <h2>Legacy</h2>
+        <p>[Legacy content]</p>
+      </div>
+
+      <div id="media" class="tab-section card">
+        <div class="gallery-grid">
+    <img src="imgs/einstein.jpg" alt="Media 1">
+    <img src="imgs/einsteina.jpg" alt="Media 2">
+    <img src="imgs/einsteinb.jpg" alt="Media 3">
+    <img src="imgs/einsteinc.jpg" alt="Media 4">
+    <img src="imgs/einsteind.jpg" alt="Media 5">
+    <img src="imgs/einstein.jpg" alt="Media 1">
+    <img src="imgs/einsteina.jpg" alt="Media 2">
+    <img src="imgs/einsteinb.jpg" alt="Media 3">
+    <img src="imgs/einsteinc.jpg" alt="Media 4">
+    <img src="imgs/einsteind.jpg" alt="Media 5">
+    <img src="imgs/einsteinb.jpg" alt="Media 3">
+    <img src="imgs/einsteinb.jpg" alt="Media 3">
+
+    <div class="load-more-container">
+  <button onclick="openNewPage()" class="load-more">Load More</button>
+</div>
+
+  </div>
+      </div>
+    </div>
+
+    <!-- SIDE PANEL -->
+    <aside class="side-panel">
+      <div class="quick-facts">
+        <h3>Quick Facts</h3>
+        <table>
+          <tr><td><b>Born:</b></td><td> 14 March 1879</td></tr>
+          <tr><td><b>Died:</b></td><td> 18 April 1955</td></tr>
+          <tr><td><b>Fields:</b></td><td> Theoretical physics</td></tr>
+          <tr><td><b>Awards:</b></td><td> Nobel Prize (1921)</td></tr>
+        </table>
+      </div>
+      <div class="timeline">
+        <p>Mass–energy equivalence</p>
+        <p>E = mc²</p>
+      </div>
+      <div class="related-articles">
+        <h3>Related Articles</h3>
+        <ul>
+          <li><a href="https://unsplash.com/s/photos/einstein">Galileo Galilei</a></li>
+          <li><a href="#">Quantum Mechanics</a></li>
+        </ul>
+      </div>
+      <div class="references">
+        <h3>References</h3>
+        <ol>
+          <li><a href="#"> Anist 3333 </a></li>
+          <li><a href="#"> Anist 3333 </a></li>
+          <li><a href="#"> Anist 3333 </a></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025. The New Knowledge Hub. <b>Complete Project One (Graded).</b>
+  </footer>
+
+  <script>
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabSections = document.querySelectorAll('.tab-section');
+
+    tabLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        tabLinks.forEach(l => l.classList.remove('active'));
+        tabSections.forEach(section => section.classList.remove('active'));
+
+        link.classList.add('active');
+        document.getElementById(link.dataset.tab).classList.add('active');
+      });
+    });
+
+ function openNewPage() {
+    window.open("https://unsplash.com/s/photos/einstein", "_blank");
+  }
+
+  </script>
+</body>
+</html>

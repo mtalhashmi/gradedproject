@@ -1,0 +1,220 @@
+    /* ============ BASE STYLES ============ */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    /* ============ HERO SECTION ============ */
+    .hero {
+  background: linear-gradient(to right, rgba(230, 0, 255, 0.352), rgba(255, 0, 0, 0.5)),
+    url('imgs/einstein.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  padding: 80px 20px 40px;
+  text-align: center;
+}
+
+    .hero h1 {
+      font-size: 6rem;
+      margin-bottom: 5px;
+      padding: 1px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .hero button {
+      background: white;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero button:hover {
+      background: linear-gradient(to right, #ff00153f, #ff00d91e);
+      color: rgb(255, 255, 255);
+      padding: 10px 20px;
+      border: solid 2px #fff;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* ============ NAVIGATION ============ */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      border-bottom: 1px solid #ccc;
+      padding: 15px 0;
+      font-weight: 600;
+    }
+    nav a {
+      padding: 10px;
+      cursor: pointer;
+    }
+    nav a.active {
+      border-bottom: 3px solid #333;
+    }
+
+    /* ============ MAIN SECTION ============ */
+    .container {
+      display: flex;
+      padding: 40px 20px;
+      gap: 30px;
+      width: auto;
+      margin: 0% auto;
+    }
+    .main-content {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: auto;
+      margin: 0% auto;
+    }
+    .card {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: black;
+    }
+    .card h2 {
+      margin-bottom: 10px;
+    }
+
+    .side-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .quick-facts, .related-articles, .references {
+      background: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+    }
+   .related-articles {
+      background: #f1f1f1;
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+    .references {
+      background: #f1f1f1;
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+
+    .quick-facts table, .references ol {
+      font-size: 0.95rem;
+    }
+    .timeline {
+      text-align: center;
+      background: #fff8f2;
+      padding: 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      border: 1px solid pink;
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      width: 100%;
+    }
+
+    /* ============ TABS FUNCTIONALITY ============ */
+    .tab-section {
+      display: none;
+    }
+    .tab-section.active {
+      display: block;
+    }
+
+    .media-gallery {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.media-gallery h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+  grid-template-rows: repeat(2, 200px);    /* max 2 rows, each 200px tall */
+  gap: 10px;
+  overflow: hidden;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+.load-more {
+    background: linear-gradient(to right, #ff0015, #ff00d9);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    grid-column: 1 / -1; /* Span the entire row */
+    justify-self: center;
+    margin-top: 20px;
+    content: yes;
+}
+
+.load-more::after {
+  content: " →"; /* or use ↓ or any Unicode arrow */
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.load-more:hover {
+      background: linear-gradient(to right, #ff00d9, #ff0015);
+      transform: scale(1.01);
+    }
